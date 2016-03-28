@@ -16,7 +16,6 @@ public class IndexController {
 	
 	private static Map<String, String> MAPS = new HashMap<String, String>();
 	
-	
 	@Autowired
 	private IndexService indexService ;
 	
