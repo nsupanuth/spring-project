@@ -1,10 +1,12 @@
 package com.example.springproject.model;
 
+
 public class User {
 
 	private String firstname ;
 	private String lastname;
 	private Integer age ;
+	private Integer futureage ;
 	
 	public String getFirstname() {
 		return firstname;
@@ -24,6 +26,14 @@ public class User {
 	public void setAge(Integer age) {
 		this.age = age;
 	}
+	public Integer getFutureage() {
+		return futureage;
+	}
+	public void setFutureage(Integer futureage) {
+		this.futureage = futureage;
+	}
+	
+	
 	
 	
 }

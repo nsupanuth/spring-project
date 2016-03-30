@@ -13,18 +13,32 @@ import com.example.springproject.repository.UserRepository;
 public class IndexService {
 
 	@Autowired
-	private UserRepository userRopository ;
+	private UserRepository userRepository ;
 	
 	
 	public List<User> addUser(User user){
 		
-		return userRopository.add(user);
-		
+		return userRepository.add(user);
 	}
 	
 	public User appendZ(User user){
 		String firstname = user.getFirstname() + "Z";
 		user.setFirstname(firstname);
+		return user;
+//		int count = user.getFirstname().length() ;
+//		String show = "" ;
+//		if(count<5){
+//			show = "Less than 5";
+//		}else{
+//			show = "More than 5";
+//		}
+//		user.setFirstname(show);
+//		return user;
+	}
+	
+	public User futureage(User user){
+		int age = user.getFutureage() + 10 ;
+		user.setFutureage(age);
 		return user;
 	}
 	
@@ -40,6 +54,6 @@ public class IndexService {
 
 	public List<User> getUser() {
 	
-		return userRopository.getAll();
+		return userRepository.getAll();
 	}
 }

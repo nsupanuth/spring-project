@@ -12,6 +12,8 @@ import com.example.springproject.model.User;
 import com.example.springproject.service.IndexService;
 
 @RestController
+//@Controller
+//@Responsebody
 @RequestMapping("/user")
 public class UserController {
 	
@@ -26,6 +28,8 @@ public class UserController {
 	@RequestMapping(method = RequestMethod.POST)
 	public List<User> post(@RequestBody User user){
 		user = indexService.appendZ(user);
+		user = indexService.futureage(user);
 		return indexService.addUser(user);
 	}
+	
 }
